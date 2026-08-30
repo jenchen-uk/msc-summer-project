@@ -1,0 +1,52 @@
+{
+    "disease_type": "otitis externa",
+    "duration_evidence": "for a couple of weeks",
+    "ear_condition": {
+        "discharge": "ceruminous discharge externally",
+        "inflammation": "sensitive ears; canals compressible",
+        "ulceration": "not_mentioned",
+        "tympanic_membrane": "TM intact",
+        "source_quote": "Saphir has been scratching at ears for a couple of weeks... Sensitive ears but canals compressible. Ceruminous discharge externally. Internally looks ok TM intact.",
+        "status": "stated_in_note"
+    },
+    "cytology_result": {
+        "organism": "cocci",
+        "quantity": "mainly",
+        "position": "not_mentioned",
+        "other_findings": "not_mentioned",
+        "rods_present": false,
+        "infection": false,
+        "source_quote": "cystologically mainly cocci",
+        "status": "stated_in_note"
+    },
+    "pain_evidence": {
+        "value": "sensitive ears",
+        "source_quote": "Sensitive ears but canals compressible.",
+        "status": "inferred_from_findings"
+    },
+    "treatment_mentioned": [
+        {
+            "treatment": "cleaned ears",
+            "source_quote": "cleaned ears",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "Surolan",
+            "source_quote": "owner to apply surolan at home",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "weight clinic",
+            "source_quote": "keen for weight clinic",
+            "status": "stated_in_note",
+            "for_otitis": false
+        }
+    ],
+    "final_delivery": {
+        "value": "cleaned ears and owner to apply Surolan at home",
+        "source_quote": "cleaned ears and owner to apply surolan at home.",
+        "status": "stated_in_note"
+    }
+}

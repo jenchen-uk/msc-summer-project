@@ -1,0 +1,33 @@
+{
+    "summary": "The vet examined the ear and found waxy discharge on the outside; the inside looked okay and the eardrum was intact. A cytology sample showed mainly cocci, and the ears were sensitive but the canals were still compressible. The plan was to use topical treatment, choose a combination ear medication, and have the owner apply it at home every day.",
+    "explanations": [
+        {
+            "foil_type": 0,
+            "node": "Step0",
+            "decision": "topical treatment",
+            "causal": "The main way to treat an ear infection is with medicine you put straight into the ear, and this fits the finding of discharge on the outside while the inside looked okay and the eardrum was intact. That lets the medicine reach the infection directly and work where it is needed most.",
+            "contrastive": "The vet chose topical treatment instead of systemic antibiotics. Medicine given by mouth or by injection usually does not get into the ear canal in high enough amounts, so it often is not strong enough to clear the infection where it is actually happening, even with the ear findings seen here."
+        },
+        {
+            "foil_type": 2,
+            "node": "Step1",
+            "decision": "a combination ear medication",
+            "causal": "Cocci were seen on the sample, and these bacteria are commonly treated with a branded ear medicine that combines an antibiotic, an antifungal, and a steroid. That choice fits the infection seen in the ear sample and also helps calm the inflammation at the same time.",
+            "contrastive": "The vet chose a combination medication instead of an antibiotic-only product. An antibiotic-only medicine would treat the bacteria, but it would not address the swelling and irritation because it has no steroid component, while the combination product also helps settle the inflamed ear."
+        },
+        {
+            "foil_type": 3,
+            "node": "Step2",
+            "decision": "direct treatment",
+            "causal": "Direct treatment is the usual first step for otitis externa, and the ears were sensitive but the canals were still compressible. That means the ear could still be treated without extra preparation, so treatment could start right away.",
+            "contrastive": "The vet chose direct treatment instead of a relieve-first step. A relieve-first step is meant for ears that are so swollen, painful, or narrowed that topical treatment would not reach them or would be too hard to tolerate, and this ear did not show those problems because the canals were still compressible."
+        },
+        {
+            "foil_type": 4,
+            "node": "Step3",
+            "decision": "daily dosing at home",
+            "causal": "The owner can give the medication at home, and the ear treatment can be done regularly. That makes daily dosing a practical way to keep the medicine going in consistently so the infection and inflammation can be controlled.",
+            "contrastive": "The vet chose daily dosing at home instead of a long-acting medicine. Long-acting products are mainly helpful when regular treatment is hard to manage, but here the owner can apply the medication reliably at home, so the standard daily schedule is enough."
+        }
+    ]
+}

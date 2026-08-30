@@ -1,0 +1,92 @@
+{
+    "path": [
+        "Gate1: externa",
+        "Gate2: acute/subacute (not chronic; continued pathway)",
+        "Step0: topical",
+        "Step1: malassezia",
+        "Step2: direct_treatment",
+        "Step3: daily"
+    ],
+    "foils": [
+        {
+            "foil_type": 0,
+            "node": "Step0",
+            "branch_taken": "topical",
+            "question": "Why treat the infection with topical medication instead of systemic (oral/injectable) antibiotics?",
+            "traversal_trace": [
+                {
+                    "source_fields": "disease_type",
+                    "value": "otitis externa"
+                },
+                {
+                    "source_fields": "treatment_mentioned.for_otitis",
+                    "value": "true; Surolan; Otodine; cleaned ears in consult room"
+                }
+            ],
+            "note_evidence": "both ears have grey wax and discharge present, canal bit narrowed, itchy",
+            "rejected_alternative": "systemic"
+        },
+        {
+            "foil_type": 2,
+            "node": "Step1",
+            "branch_taken": "malassezia",
+            "question": "Why combination product, not antibiotic medication?",
+            "traversal_trace": [
+                {
+                    "source_fields": "cytology_result.organism",
+                    "value": "yeast"
+                },
+                {
+                    "source_fields": "cytology_result.quantity",
+                    "value": "left yeast ++, right yeast +"
+                },
+                {
+                    "source_fields": "cytology_result.rods_present",
+                    "value": "false"
+                },
+                {
+                    "source_fields": "cytology_result.infection",
+                    "value": "true"
+                }
+            ],
+            "note_evidence": "swabbed both ears left yeast ++ , right yeast +",
+            "rejected_alternative": "antibiotic_only"
+        },
+        {
+            "foil_type": 3,
+            "node": "Step2",
+            "branch_taken": "direct_treatment",
+            "question": "Why direct treatment instead of relieve first?",
+            "traversal_trace": [
+                {
+                    "source_fields": "pain_evidence.value",
+                    "value": "not_mentioned"
+                },
+                {
+                    "source_fields": "treatment_mentioned.for_otitis",
+                    "value": "true; cleaned ears in consult room; ear meds; Surolan; Otodine"
+                }
+            ],
+            "note_evidence": "both ears have grey wax and discharge present, canal bit narrowed, itchy",
+            "rejected_alternative": "relieve_first"
+        },
+        {
+            "foil_type": 4,
+            "node": "Step3",
+            "branch_taken": "daily",
+            "question": "Why daily dose instead of long-acting medicine?",
+            "traversal_trace": [
+                {
+                    "source_fields": "final_delivery.value",
+                    "value": "home on Surolan BID 10 days; re-check ears in 10 days; cleaned ears in consult room; recommend Otodine"
+                },
+                {
+                    "source_fields": "treatment_mentioned",
+                    "value": "Surolan; Otodine; cleaned ears in consult room"
+                }
+            ],
+            "note_evidence": "swabbed both ears left yeast ++ , right yeast +",
+            "rejected_alternative": "long_acting"
+        }
+    ]
+}

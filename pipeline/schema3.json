@@ -1,0 +1,55 @@
+{
+    "name": "phase3",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "summary": {
+                "type": "string",
+                "description": "summary for the treatment vet makes (refer to each foils)"
+            },
+            "explanations": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "description": "one entry per foil carried over from phase2, in the same order. Each entry holds BOTH explanation versions for the SAME decision, so the two versions always cover identical content and differ only in form.",
+                    "properties": {
+                        "foil_type": {
+                            "type": "integer",
+                            "description": "carried over from phase2 (0-4)"
+                        },
+                        "node": {
+                            "type": "string",
+                            "description": "carried over from phase2 (e.g. 'Step1')"
+                        },
+                        "decision": {
+                            "type": "string",
+                            "description": "plain-language, owner-facing statement of WHAT the vet chose at this node (no reasoning yet)"
+                        },
+                        "causal": {
+                            "type": "string",
+                            "description": "owner-facing CAUSAL explanation: why this choice was made, as forward reasoning. (refer to causal_text) Must NOT mention the rejected alternative."
+                        },
+                        "contrastive": {
+                            "type": "string",
+                            "description": "owner-facing CONTRASTIVE explanation: why this choice was made INSTEAD OF the rejected alternative, explicit explain what was not chosen and why. (refer to contrast_text)"
+                        }
+                    },
+                    "required": [
+                        "foil_type",
+                        "node",
+                        "decision",
+                        "causal",
+                        "contrastive"
+                    ],
+                    "additionalProperties": false
+                }
+            }
+        },
+        "required": [
+            "summary",
+            "explanations"
+        ],
+        "additionalProperties": false
+    },
+    "strict": true
+}

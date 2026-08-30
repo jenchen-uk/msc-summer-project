@@ -1,0 +1,94 @@
+{
+    "name": "phase2",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "path": {
+                "type": "array",
+                "description": "record of each node and chosen branch (e.g. 'Gate1: externa', 'Step1: malassezia')",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "foils": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "description": "one record per foil produced along the path",
+                    "properties": {
+                        "foil_type": {
+                            "type": "integer",
+                            "description": "0-4, matches Foil0 to Foil4 in DECISION TREE"
+                        },
+                        "node": {
+                            "type": "string",
+                            "description": "the Gate/Step this foil belongs to (e.g. 'Step1')"
+                        },
+                        "branch_taken": {
+                            "type": "string",
+                            "description": "the named branch actually taken at this node",
+                            "enum": [
+                                "topical",
+                                "no_infection",
+                                "malassezia",
+                                "cocci",
+                                "relieve_first",
+                                "direct_treatment",
+                                "daily",
+                                "long_acting"
+                            ]
+                        },
+                        "question": {
+                            "type": "string",
+                            "description": "the foil question, phrased per FOIL QUESTIONS rules"
+                        },
+                        "traversal_trace": {
+                            "type": "array",
+                            "description": "the basis of the decision from JSON, explicit which fields and what value/content",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "source_fields": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "source_fields",
+                                    "value"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "note_evidence": {
+                            "type": "string",
+                            "description": "from the source_quotes phase1_result recorded for THIS node and related to branch decision, never fabricate a quote."
+                        },
+                        "rejected_alternative": {
+                            "type": "string",
+                            "description": "the option NOT chosen at this node (serves the contrastive explanation)"
+                        }
+                    },
+                    "required": [
+                        "foil_type",
+                        "node",
+                        "branch_taken",
+                        "question",
+                        "traversal_trace",
+                        "note_evidence",
+                        "rejected_alternative"
+                    ],
+                    "additionalProperties": false
+                }
+            }
+        },
+        "required": [
+            "path",
+            "foils"
+        ],
+        "additionalProperties": false
+    },
+    "strict": true
+}

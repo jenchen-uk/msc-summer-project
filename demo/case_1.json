@@ -1,0 +1,33 @@
+{
+    "summary": "The vet examined both ears and found grey wax and discharge, with the ear canals a bit narrowed and the ears itchy. The swab also showed yeast in both ears, with more on the left than the right. The plan was to treat with topical medicine, choose a combination medication for the yeast infection, and use a daily dose.",
+    "explanations": [
+        {
+            "foil_type": 0,
+            "node": "Step0",
+            "decision": "treat with topical medicine",
+            "causal": "The main way to treat an ear infection is with medicine you put straight into the ear. Because both ears had grey wax and discharge, with the canals a bit narrowed and itchy, this lets the medicine reach the infection right where it is so it can work effectively.",
+            "contrastive": "The vet chose to treat with topical medicine instead of systemic treatment. Medicine given by mouth or by injection doesn't usually get into the ear canal in high enough amounts, so it may not be strong enough to clear the infection where it is happening, especially with both ears having grey wax, discharge, a bit of narrowing, and itchiness."
+        },
+        {
+            "foil_type": 2,
+            "node": "Step1",
+            "decision": "use a combination medication for the yeast infection",
+            "causal": "Malassezia is a yeast, so treatment needs a medicine with antifungal ingredients. Since the swab showed yeast in both ears, with more on the left than the right, a combination medication with antifungal medicine is the right fit for this infection.",
+            "contrastive": "The vet chose to use a combination medication for the yeast infection instead of an antibiotic-only medication. An antibiotic-only medication would not work on yeast at all, so it would miss the organism seen on the swab in both ears and leave the infection untreated."
+        },
+        {
+            "foil_type": 3,
+            "node": "Step2",
+            "decision": "treat directly now",
+            "causal": "Direct treatment is the usual first step for ear infection, since most ears can tolerate cleaning and treatment without extra preparation. Because both ears had grey wax and discharge and the canals were only a bit narrowed, this lets treatment start right away without delay.",
+            "contrastive": "The vet chose to treat directly now instead of using a relieve-first step. A relieve-first approach is mainly for ears that are so swollen, painful, or narrowed that the treatment could not reach them or be tolerated, and these ears were not described that way, so starting direct treatment was appropriate."
+        },
+        {
+            "foil_type": 4,
+            "node": "Step3",
+            "decision": "use a daily dose",
+            "causal": "The owner can give the medication reliably on schedule, and the animal tolerates regular handling for treatment. With yeast seen in both ears on the swab, a daily dose is a suitable way to keep the medicine going in consistently so the infection and inflammation can be controlled.",
+            "contrastive": "The vet chose to use a daily dose instead of a long-acting medicine. Long-acting products are mainly helpful when home treatment is difficult or the animal dislikes regular ear care, but here the medication can be given reliably at home and the animal tolerates regular treatment, so daily dosing was enough."
+        }
+    ]
+}

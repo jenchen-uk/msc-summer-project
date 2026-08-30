@@ -1,0 +1,92 @@
+{
+    "path": [
+        "Gate1: externa",
+        "Gate2: subacute",
+        "Step0: topical",
+        "Step1: cocci",
+        "Step2: direct_treatment",
+        "Step3: daily"
+    ],
+    "foils": [
+        {
+            "foil_type": 0,
+            "node": "Step0",
+            "branch_taken": "topical",
+            "question": "Why treat the infection with topical medication instead of systemic (oral/injectable) antibiotics?",
+            "traversal_trace": [
+                {
+                    "source_fields": "disease_type",
+                    "value": "otitis externa"
+                },
+                {
+                    "source_fields": "ear_condition",
+                    "value": "ceruminous discharge externally; sensitive ears but canals compressible; TM intact"
+                },
+                {
+                    "source_fields": "treatment_mentioned",
+                    "value": "cleaned ears; owner to apply surolan at home"
+                }
+            ],
+            "note_evidence": "\"Ceruminous discharge externally. Internally looks ok TM intact.\"",
+            "rejected_alternative": "systemic"
+        },
+        {
+            "foil_type": 2,
+            "node": "Step1",
+            "branch_taken": "cocci",
+            "question": "Why combination product, not antibiotic medication?",
+            "traversal_trace": [
+                {
+                    "source_fields": "cytology_result",
+                    "value": "mainly cocci"
+                },
+                {
+                    "source_fields": "cytology_result.rods_present",
+                    "value": "false"
+                }
+            ],
+            "note_evidence": "\"cystologically mainly cocci\"",
+            "rejected_alternative": "antibiotic_only"
+        },
+        {
+            "foil_type": 3,
+            "node": "Step2",
+            "branch_taken": "direct_treatment",
+            "question": "Why direct treatment instead of relieve first?",
+            "traversal_trace": [
+                {
+                    "source_fields": "pain_evidence",
+                    "value": "sensitive ears"
+                },
+                {
+                    "source_fields": "ear_condition",
+                    "value": "canals compressible"
+                },
+                {
+                    "source_fields": "treatment_mentioned",
+                    "value": "cleaned ears; owner to apply surolan at home"
+                }
+            ],
+            "note_evidence": "\"Sensitive ears but canals compressible.\"",
+            "rejected_alternative": "relieve_first"
+        },
+        {
+            "foil_type": 4,
+            "node": "Step3",
+            "branch_taken": "daily",
+            "question": "Why daily dose instead of long-acting medicine?",
+            "traversal_trace": [
+                {
+                    "source_fields": "treatment_mentioned",
+                    "value": "owner to apply surolan at home"
+                },
+                {
+                    "source_fields": "final_delivery",
+                    "value": "cleaned ears and owner to apply Surolan at home"
+                }
+            ],
+            "note_evidence": "\"owner to apply surolan at home\"",
+            "rejected_alternative": "long_acting"
+        }
+    ]
+}

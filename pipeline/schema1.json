@@ -1,0 +1,204 @@
+{
+    "name": "phase1",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "disease_type": {
+                "type": "string",
+                "description": "type of otitis diagnosed or suspected: otitis externa, media, or interna"
+            },
+            "duration_evidence": {
+                "type": "string",
+                "description": "specific timeframe indicating how long the current ear condition has lasted."
+            },
+            "ear_condition": {
+                "type": "object",
+                "description": "evidence regarding discharge, inflammation, ulceration, and tympanic membrane",
+                "properties": {
+                    "discharge": {
+                        "type": "string"
+                    },
+                    "inflammation": {
+                        "type": "string"
+                    },
+                    "ulceration": {
+                        "type": "string"
+                    },
+                    "tympanic_membrane": {
+                        "type": "string"
+                    },
+                    "source_quote": {
+                        "type": "string",
+                        "description": "exact text from the note that support the above. Empty string if not stated."
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "stated_in_note = the note states these findings directly; inferred_from_findings = derived from other recorded signs; not_in_note = not present in the note",
+                        "enum": [
+                            "stated_in_note",
+                            "inferred_from_findings",
+                            "not_in_note"
+                        ]
+                    }
+                },
+                "required": [
+                    "discharge",
+                    "inflammation",
+                    "ulceration",
+                    "tympanic_membrane",
+                    "source_quote",
+                    "status"
+                ],
+                "additionalProperties": false
+            },
+            "cytology_result": {
+                "type": "object",
+                "properties": {
+                    "organism": {
+                        "type": "string"
+                    },
+                    "quantity": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "string"
+                    },
+                    "other_findings": {
+                        "type": "string"
+                    },
+                    "rods_present": {
+                        "type": "boolean"
+                    },
+                    "infection": {
+                        "type": "boolean"
+                    },
+                    "source_quote": {
+                        "type": "string",
+                        "description": "exact text from the note reporting the cytology. Empty string if not stated."
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "stated_in_note = cytology result is written in the note; inferred_from_findings = inferred; not_in_note = no cytology reported",
+                        "enum": [
+                            "stated_in_note",
+                            "inferred_from_findings",
+                            "not_in_note"
+                        ]
+                    }
+                },
+                "required": [
+                    "organism",
+                    "quantity",
+                    "position",
+                    "other_findings",
+                    "rods_present",
+                    "infection",
+                    "source_quote",
+                    "status"
+                ],
+                "additionalProperties": false
+            },
+            "pain_evidence": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string"
+                    },
+                    "source_quote": {
+                        "type": "string",
+                        "description": "exact text from the note. Empty string if not stated."
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "stated_in_note = pain stated directly (e.g. 'painful'); inferred_from_findings = inferred from behaviour (e.g. head-shaking, scratching); not_in_note = no pain info",
+                        "enum": [
+                            "stated_in_note",
+                            "inferred_from_findings",
+                            "not_in_note"
+                        ]
+                    }
+                },
+                "required": [
+                    "value",
+                    "source_quote",
+                    "status"
+                ],
+                "additionalProperties": false
+            },
+            "treatment_mentioned": {
+                "type": "array",
+                "description": "list EVERY treatment/medication option discussed, even if multiple alternatives are offered. Do not pick one. Preserve the ORDER in which actions appear in the note (needed for Foil3 sequence).",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "treatment": {
+                            "type": "string"
+                        },
+                        "source_quote": {
+                            "type": "string",
+                            "description": "exact text naming this treatment. Empty string if not stated."
+                        },
+                        "status": {
+                            "type": "string",
+                            "description": "stated_in_note = named in the note; inferred_from_findings = inferred; not_in_note = not present",
+                            "enum": [
+                                "stated_in_note",
+                                "inferred_from_findings",
+                                "not_in_note"
+                            ]
+                        },
+                        "for_otitis": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "treatment",
+                        "source_quote",
+                        "status",
+                        "for_otitis"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "final_delivery": {
+                "type": "object",
+                "description": "final disposition/next steps/follow-up actually administered or planned",
+                "properties": {
+                    "value": {
+                        "type": "string"
+                    },
+                    "source_quote": {
+                        "type": "string",
+                        "description": "exact text from the note. Empty string if not stated."
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "stated_in_note = final plan stated; inferred_from_findings = inferred; not_in_note = no final plan recorded",
+                        "enum": [
+                            "stated_in_note",
+                            "inferred_from_findings",
+                            "not_in_note"
+                        ]
+                    }
+                },
+                "required": [
+                    "value",
+                    "source_quote",
+                    "status"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "required": [
+            "disease_type",
+            "duration_evidence",
+            "ear_condition",
+            "cytology_result",
+            "pain_evidence",
+            "treatment_mentioned",
+            "final_delivery"
+        ],
+        "additionalProperties": false
+    },
+    "strict": true
+}

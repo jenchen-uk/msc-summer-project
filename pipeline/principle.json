@@ -1,0 +1,42 @@
+{
+    "topical": {
+        "source": "Ch20 p.151 \"Elimination of microbial infections\"",
+        "causal_text": "The main way to treat an ear infection is with medicine put straight into the ear. This allows the medicine to reach a strong enough level right at the site of infection, so it can clear the infection effectively.",
+        "contrast_text": "Medicine given by mouth or by injection doesn't really make it into the ear canal in high enough doses. As a result, it often isn't strong enough to clear up the infection where it's actually happening and the infection is likely to persist even after treatment."
+    },
+    "no_infection": {
+        "source": "Ch20 p.153 \"Allergic otitis externa\"; p.151 \"Elimination of microbial infections\"",
+        "causal_text": "When cytology result shows no infectious organisms, this means the inflammation is driving the symptoms. A steroid-based medication (usually glucocorticoid) is used because it directly reduces the inflammation, which in turn eases the itching and discomfort.",
+        "contrast_text": "Using an antimicrobial here would be inappropriate and unnecessary. With no corresponding organisms present on cytology result, there is no infection for the drug to treat."
+    },
+    "malassezia": {
+        "source": "Ch20 p.151 \"Topical antimicrobials\"; p.153 \"Acute otitis...infection\"",
+        "causal_text": "Malassezia is a yeast (a type of fungus), so treatment needs a medication with antifungal ingredients. This kind of infection is usually treated with a combination product containing an antifungal, an antibiotic, and a steroid together.",
+        "contrast_text": "An antibiotic-only product was not suitable because antibiotics target bacteria and have no effect on yeast at all. It would have missed the actual organism seen on the smear, leaving the infection untreated."
+    },
+    "cocci": {
+        "source": "Ch19 p.146 \"Cytology\"; Ch20 p.153 \"Acute otitis...infection\"",
+        "causal_text": "Cocci (usually Staphylococcus) are bacteria commonly seen in acute otitis externa. They are typically treated with a branded ear medication that combines an antibiotic, an antifungal, and a glucocorticoid (a type of steroid).",
+        "contrast_text": "An antibiotic-only product would treat the bacteria but would not address inflammation, since it does not contain steroid. Because the combination product adds a steroid alongside the antibiotic, it clears the infection while also settling the swelling and discomfort that the bacteria alone won't resolve."
+    },
+    "relieve_first": {
+        "source": "Ch20 p.150 \"Relieving...pain and pruritus\"; p.152 \"Glucocorticoids\"",
+        "causal_text": "A relieve-first step is chosen when the ear shows clear signs of being too swollen, painful, narrowed, or ulcerated (the skin inside is broken or raw) for treatment to reach the affected area or be tolerated. In that situation a systemic anti-inflammatory (such as oral prednisolone) is given first to settle the swelling and pain, so the follow-up ear medication can actually reach the area and the animal can tolerate having the ear treated.",
+        "contrast_text": "Going straight to direct treatment when the ear is badly swollen, narrowed or ulcerated risks two problems: swelling can fold the ear canal lining in on itself, blocking medication from reaching the affected area, and forcing treatment on a very painful or raw ear can make the animal start to resist any future ear handling (ear-phobia). Settling the ear first with a short course of anti-inflammatory treatment avoids both problems before further therapy begins."
+    },
+    "direct_treatment": {
+        "source": "Ch20 p.150 \"Relieving...pain and pruritus\"",
+        "causal_text": "Direct treatment is the usual first step for otitis externa, since most ears can tolerate cleaning and therapy without additional preparation. This method begins resolving the underlying infection and inflammation without delay and avoids giving the animal an extra treatment it doesn't need.",
+        "contrast_text": "A relieve-first step is particularly indicated for for ears that are so swollen or painful that topical treatment could not reach the area or be tolerated by the animal. If ear does not show those signs, adding a systemic anti-inflammatory first is unnecessary and might delay the start of direct treatment."
+    },
+    "daily": {
+        "source": "Ch20 p.153 \"Acute otitis externa associated with microbial infection\"",
+        "causal_text": "The owner can give the medication reliably on schedule, and the animal tolerates regular handling for treatment. This makes daily dosing a suitable choice, since the medication reaches the ear consistently and the inflammation and infection can be controlled without missed doses.",
+        "contrast_text": "Long-acting products (given once a week or once a month) are particularly helpful for dogs with poor compliance or early signs of ear-phobia. Since the medication can be given reliably at home and the animal tolerates regular treatment, the standard daily dose can be used instead of the long-acting option."
+    },
+    "long_acting": {
+        "source": "Ch20 p.153 \"Acute otitis externa associated with microbial infection\"",
+        "causal_text": "Long-acting products (given once a week or once a month) help ensure the full course is completed, which are particularly helpful for animals with poor compliance or early signs of ear-phobia.",
+        "contrast_text": "Daily dosing means repeatedly applying medication to the potentially painful ear every day, and this repeated, forceful treatment carries the risk of ear-phobia. Long-acting products reduce this risk by completing the treatment in fewer, more hands-off ways."
+    }
+}

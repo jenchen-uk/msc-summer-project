@@ -1,0 +1,76 @@
+{
+    "disease_type": "otitis externa",
+    "duration_evidence": "not_mentioned",
+    "ear_condition": {
+        "discharge": "both ears have grey wax and discharge present",
+        "inflammation": "canal bit narrowed, itchy",
+        "ulceration": "not_mentioned",
+        "tympanic_membrane": "not_mentioned",
+        "source_quote": "both ears have grey wax and discharge present, canal bit narrowed, itchy",
+        "status": "stated_in_note"
+    },
+    "cytology_result": {
+        "organism": "yeast",
+        "quantity": "left yeast ++, right yeast +",
+        "position": "left ear, right ear",
+        "other_findings": "not_mentioned",
+        "rods_present": false,
+        "infection": true,
+        "source_quote": "swabbed both ears left yeast ++ , right yeast +",
+        "status": "stated_in_note"
+    },
+    "pain_evidence": {
+        "value": "not_mentioned",
+        "source_quote": "",
+        "status": "not_in_note"
+    },
+    "treatment_mentioned": [
+        {
+            "treatment": "cytology",
+            "source_quote": "1. cytology.",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "ear meds",
+            "source_quote": "2. ear meds.",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "Surolan",
+            "source_quote": "home on surolan bid 10 days.",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "cleaned ears in consult room",
+            "source_quote": "Cleaned ears in consult room.",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "Otodine",
+            "source_quote": "recommend otodine- o likely to source online.",
+            "status": "stated_in_note",
+            "for_otitis": true
+        },
+        {
+            "treatment": "meloxiad",
+            "source_quote": "DJD managed well with meloxaid and gabapentin.",
+            "status": "stated_in_note",
+            "for_otitis": false
+        },
+        {
+            "treatment": "gabapentin",
+            "source_quote": "DJD managed well with meloxaid and gabapentin.",
+            "status": "stated_in_note",
+            "for_otitis": false
+        }
+    ],
+    "final_delivery": {
+        "value": "home on Surolan BID 10 days; re-check ears in 10 days; cleaned ears in consult room; recommend Otodine",
+        "source_quote": "home on surolan bid 10 days. Re-check ears in 10 days. Cleaned ears in consult room. recommend otodine- o likely to source online.",
+        "status": "stated_in_note"
+    }
+}
